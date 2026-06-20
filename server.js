@@ -3,7 +3,9 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const morgan = require("morgan");
+
 const productRoutes = require("./routes/productRoutes");
+const authRoutes = require("./routes/authRoutes");
 const { errorHandler } = require("./middleware/errorMiddleware");
 
 dotenv.config();
@@ -15,10 +17,11 @@ app.use(cors());
 app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
-  res.send("InternSpark Task 1 API is running 🚀");
+  res.send("InternSpark API is running 🚀");
 });
 
 app.use("/api/products", productRoutes);
+app.use("/api/auth", authRoutes);
 
 // Error handler should be LAST
 app.use(errorHandler);
