@@ -1,69 +1,81 @@
-# InternSpark Task 1 - RESTful API
+# InternSpark Task 3 - JWT Authentication Backend
 
-This project is a RESTful CRUD API built using Node.js, Express.js, MongoDB, and Mongoose.
+## 📌 Project Overview
 
-## Features
+This project is a RESTful API built using Node.js, Express.js, and MongoDB. It provides secure user authentication using JSON Web Tokens (JWT) and bcrypt password hashing, along with role-based authorization.
 
-* Create product
-* Get all products
-* Get single product
-* Update product
-* Delete product
-* Mongoose schema validation
-* Error handling middleware
-* Basic logging using Morgan
-* Environment variables using dotenv
+---
 
-## Technologies Used
+## 🚀 Features
 
-* Node.js
-* Express.js
-* MongoDB Atlas
-* Mongoose
-* dotenv
-* cors
-* morgan
-* nodemon
+- User Registration
+- User Login
+- Password Hashing using bcrypt
+- JWT Authentication
+- Protected API Routes
+- Role-Based Access Control (Customer & Manager)
+- CRUD Product APIs
+- MongoDB Integration
+- Error Handling Middleware
 
-## API Endpoints
+---
 
-| Method | Endpoint            | Description              |
-| ------ | ------------------- | ------------------------ |
-| GET    | `/`                 | Test API                 |
-| POST   | `/api/products`     | Create product           |
-| GET    | `/api/products`     | Get all products         |
-| GET    | `/api/products/:id` | Get single product       |
-| PUT    | `/api/products/:id` | Update product           |
-| PATCH  | `/api/products/:id` | Partially update product |
-| DELETE | `/api/products/:id` | Delete product           |
+## 🛠 Technologies Used
 
-## Setup Instructions
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- bcryptjs
+- dotenv
+- CORS
+- Morgan
+
+---
+
+## 📂 API Endpoints
+
+### Authentication
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | /api/auth/signup | Register User |
+| POST | /api/auth/login | Login User |
+| GET | /api/auth/profile | Protected Profile |
+
+### Products
+
+| Method | Endpoint |
+|---------|----------|
+| GET | /api/products |
+| GET | /api/products/:id |
+| POST | /api/products |
+| PUT | /api/products/:id |
+| DELETE | /api/products/:id |
+
+---
+
+## 🔐 Security Features
+
+- Passwords are hashed using bcrypt.
+- JWT Tokens are generated after successful login.
+- Protected routes require valid Bearer Token.
+- Role-Based Access Control implemented.
+
+---
+
+## 📦 Installation
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Environment Variables
+---
 
-Create a `.env` file and add:
+## 👩‍💻 Developed By
 
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string_here
-```
+**Gunapalli Chandra Sai Sri**
 
-## Sample Product JSON
-
-```json
-{
-  "name": "Laptop",
-  "price": 50000,
-  "category": "Electronics",
-  "inStock": true
-}
-```
-
-## Author
-
-Chandra Sai Sri
+InternSpark Internship Task
