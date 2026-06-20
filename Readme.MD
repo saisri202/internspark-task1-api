@@ -1,81 +1,108 @@
-# InternSpark Task 3 - JWT Authentication Backend
+# 🚀 InternSpark Task 1 - Product Management REST API
 
 ## 📌 Project Overview
 
-This project is a RESTful API built using Node.js, Express.js, and MongoDB. It provides secure user authentication using JSON Web Tokens (JWT) and bcrypt password hashing, along with role-based authorization.
+This project was developed as part of the **InternSpark Internship - Task 1**.
+
+It is a RESTful Product Management API built using **Node.js**, **Express.js**, and **MongoDB Atlas**, providing complete CRUD operations for product management.
+
+> **Note:** This project was later enhanced with JWT Authentication and Role-Based Access Control as part of **InternSpark Task 3**.
 
 ---
 
-## 🚀 Features
+# ✨ Features
 
-- User Registration
-- User Login
-- Password Hashing using bcrypt
-- JWT Authentication
-- Protected API Routes
-- Role-Based Access Control (Customer & Manager)
-- CRUD Product APIs
-- MongoDB Integration
-- Error Handling Middleware
+### Product Management
 
----
+* Create Product
+* View All Products
+* View Single Product
+* Update Product
+* Delete Product
 
-## 🛠 Technologies Used
+### Authentication (Task 3 Enhancement)
 
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JWT
-- bcryptjs
-- dotenv
-- CORS
-- Morgan
+* User Registration
+* User Login
+* JWT Authentication
+* Password Hashing using bcrypt
+* Protected Routes
+* Role-Based Access Control
 
 ---
 
-## 📂 API Endpoints
+# 🛠️ Technologies Used
 
-### Authentication
-
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| POST | /api/auth/signup | Register User |
-| POST | /api/auth/login | Login User |
-| GET | /api/auth/profile | Protected Profile |
-
-### Products
-
-| Method | Endpoint |
-|---------|----------|
-| GET | /api/products |
-| GET | /api/products/:id |
-| POST | /api/products |
-| PUT | /api/products/:id |
-| DELETE | /api/products/:id |
+* Node.js
+* Express.js
+* MongoDB Atlas
+* Mongoose
+* JWT
+* bcrypt
+* dotenv
+* CORS
 
 ---
 
-## 🔐 Security Features
+# 📂 Project Structure
 
-- Passwords are hashed using bcrypt.
-- JWT Tokens are generated after successful login.
-- Protected routes require valid Bearer Token.
-- Role-Based Access Control implemented.
-
----
-
-## 📦 Installation
-
-```bash
-npm install
-npm run dev
+```
+internspark-task1-api
+│
+├── middleware
+├── models
+├── routes
+├── server.js
+├── package.json
+└── README.md
 ```
 
 ---
 
-## 👩‍💻 Developed By
+# ⚙️ Installation
+
+```bash
+npm install
+npm start
+```
+
+Runs on:
+
+```
+http://localhost:5000
+```
+
+---
+
+# 📬 API Endpoints
+
+### Product APIs
+
+* GET /api/products
+* GET /api/products/:id
+* POST /api/products
+* PUT /api/products/:id
+* DELETE /api/products/:id
+
+### Authentication APIs
+
+* POST /api/auth/signup
+* POST /api/auth/login
+
+---
+
+# 📄 Internship
+
+InternSpark Internship
+
+Task 1 – CRUD REST API
+
+---
+
+## 👨‍💻 Developed By
 
 **Gunapalli Chandra Sai Sri**
 
-InternSpark Internship Task
+B.Tech - Information Technology
+
+⭐ Thank you for visiting this repository!
